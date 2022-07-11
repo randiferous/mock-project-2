@@ -4,7 +4,7 @@ var tickerDescriptionEl = document.querySelector('#ticker-description');
 var openPriceEl = document.querySelector('#open-price');
 var closePriceEl = document.querySelector('#close-price');
 
-//const api_key = 'RYoUuKEuqa_t8l87IMMbpLsrzFmBswGt'
+const api_key = 'RYoUuKEuqa_t8l87IMMbpLsrzFmBswGt'
 
 function searchTicker(event) {
     event.preventDefault();
@@ -20,7 +20,7 @@ function searchTicker(event) {
 }
 
 function confirmTicker(tickerSymbol) {
-    var apiUrl = 'https://api.polygon.io/v3/reference/tickers/' + tickerSymbol + '?apiKey=' + API_KEY;
+    var apiUrl = 'https://api.polygon.io/v3/reference/tickers/' + tickerSymbol + '?apiKey=' + api_key;
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
@@ -40,7 +40,7 @@ function displayTickerInfo(data) {
 }
 
 function tickerPrice(tickerSymbol) {
-    var apiUrl = 'https://api.polygon.io/v2/aggs/ticker/' + tickerSymbol + '/prev?adjusted=true&apiKey=' + API_KEY;
+    var apiUrl = 'https://api.polygon.io/v2/aggs/ticker/' + tickerSymbol + '/prev?adjusted=true&apiKey=' + api_key;
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
