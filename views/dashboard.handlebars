@@ -1,4 +1,15 @@
 <section>
+    <h2>Search Ticker</h2>
+    <form class="search-ticker">
+        <div>
+            <label for="ticker-symbol">Ticker Symbol</label>
+            <input type="text" id="ticker-symbol" name="ticker-symbol" />
+        </div>
+        <button type="submit" class="btn">Search</button>
+    </form>
+</section>
+
+<section>
     <h2>Share Market News</h2>
 
     <form class="new-post-form">
@@ -11,7 +22,11 @@
             <input id="post-url" name="post-url" />
         </div>
         <div>
-            <label for="post-content">Content</label>
+            <label for="ticker">Ticker Symbol</label>
+            <input type="text" id="ticker" name="ticker" />
+        </div>
+        <div>
+            <label for="post-content">Summary</label>
             <input type="text" id="post-content" name="post-content" />
         </div>
         <button type="submit" class="btn">Create</button>
@@ -32,4 +47,5 @@
 </section>
 {{/if}}
 
+<script src="/javascript/ticker.js"></script>
 <script src="/javascript/add-post.js"></script>

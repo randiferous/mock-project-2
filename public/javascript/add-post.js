@@ -3,6 +3,7 @@ async function newFormHandler(event) {
 
     const title = document.querySelector('input[name="post-title"]').value;
     const post_url = document.querySelector('input[name="post-url"]').value;
+    const ticker = document.querySelector('input[name="ticker"]').value;
     const post_content = document.querySelector('input[name="post-content"]').value;
 
     const response = await fetch(`/api/posts`, {
@@ -10,6 +11,7 @@ async function newFormHandler(event) {
         body: JSON.stringify({
             title,
             post_url,
+            ticker,
             post_content
         }),
         headers: {
