@@ -1,3 +1,20 @@
+<section>
+    <h2>Search Ticker</h2>
+    <form class="search-ticker">
+        <div>
+            <label for="ticker-symbol">Ticker Symbol</label>
+            <input type="text" id="ticker-symbol" name="ticker-symbol" />
+        </div>
+        <button type="submit" class="btn">Search</button>
+    </form>
+    <p id="ticker-initial"></p>
+    <p id="ticker-name"></p>
+    <p id="ticker-description"></p>
+    <p id="open-price"></p>
+    <p id="close-price"></p>
+</section>
+
+<h2>Market News</h2>
 <ol class="post-list">
     {{#each posts as |post|}}
     <li>
@@ -5,3 +22,5 @@
     </li>
     {{/each}}
 </ol>
+
+<script src="/javascript/ticker.js"></script>
