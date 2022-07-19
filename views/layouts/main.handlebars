@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Market Forum</title>
+    <title>Healthcare Hero</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
@@ -12,11 +12,12 @@
     <div class="wrapper">
         <header>
             <h1>
-                <a href="/">Stock Market Forum</a>
+                <a href="/">Healthcare Hero</a>
             </h1>
             <nav>
                 {{#if loggedIn}}
                 <a href="/dashboard">dashboard</a>
+                <a href="/help">help</a>
                 <button id="logout" class="btn-no-style">logout</button>
                 {{else}}
                 <a href="/login">login</a>

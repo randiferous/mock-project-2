@@ -3,11 +3,14 @@
         <a href="{{post_url}}" target="_blank">{{title}}</a>
         <span>({{format_url post_url}})</span>
     </div>
-    <div class="ticker">
-        <p>Ticker: {{ticker}}</p>
+        <div class="address">
+        <p>Address: {{address}}</p>
     </div>
-    <div class="content">
-        <p>{{post_content}}</p>
+    <div class="service_type">
+        <p>Type of Service: {{service_type}}</p>
+    </div>
+        <div class="cost">
+        <p>Cost: ${{cost}}</p>
     </div>
     <div class="meta">
         {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}

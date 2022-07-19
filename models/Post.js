@@ -15,8 +15,9 @@ class Post extends Model {
                     'id',
                     'post_url',
                     'title',
-                    'post_content',
-                    'ticker',
+                    'address',
+                    'service_type',
+                    'cost',
                     'created_at',
                     [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
                 ],
@@ -55,15 +56,22 @@ Post.init(
                 isURL: true
             }
         },
-        ticker: {
+        service_type: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        post_content: {
+        address: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
+            }
+        },
+        cost: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                isDecimal: true,
             }
         },
         user_id: {

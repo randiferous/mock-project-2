@@ -1,38 +1,26 @@
 <section>
-    <h2>Search Ticker</h2>
-    <form class="search-ticker">
-        <div>
-            <label for="ticker-symbol">Ticker Symbol</label>
-            <input type="text" id="ticker-symbol" name="ticker-symbol" />
-        </div>
-        <button type="submit" class="btn">Search</button>
-    </form>
-    <p id="ticker-initial"></p>
-    <p id="ticker-name"></p>
-    <p id="ticker-description"></p>
-    <p id="open-price"></p>
-    <p id="close-price"></p>
-</section>
-
-<section>
-    <h2>Post Market News</h2>
+    <h2>Share Provider Information</h2>
 
     <form class="new-post-form">
         <div>
-            <label for="post-title">Title</label>
-            <input type="text" id="post-title" name="post-title" />
+            <label for="provider-name">Provider Name</label>
+            <input type="text" id="provider-name" name="provider-name" />
         </div>
         <div>
-            <label for="post-url">Link</label>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" />
+        </div>
+        <div>
+            <label for="post-url">Provider Link</label>
             <input id="post-url" name="post-url" />
         </div>
         <div>
-            <label for="ticker">Ticker Symbol</label>
-            <input type="text" id="ticker" name="ticker" />
+            <label for="service_type">Type of Service</label>
+            <input type="text" id="service_type" name="service_type" />
         </div>
         <div>
-            <label for="post-content">Summary</label>
-            <input type="text" id="post-content" name="post-content" />
+            <label for="cost">Service Cost:</label>
+            <input type="number" id="cost" name="cost" />
         </div>
         <button type="submit" class="btn">Create</button>
     </form>
@@ -45,12 +33,11 @@
         {{#each posts as |post|}}
         <li>
             {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit provider</a>
         </li>
         {{/each}}
     </ol>
 </section>
 {{/if}}
 
-<script src="/javascript/ticker.js"></script>
 <script src="/javascript/add-post.js"></script>

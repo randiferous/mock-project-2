@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS stock_news_db;
+DROP DATABASE IF EXISTS healthcare_db;
 
-CREATE DATABASE stock_news_db;
+CREATE DATABASE healthcare_db;
